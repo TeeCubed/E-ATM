@@ -1,0 +1,8 @@
+language csharp
+solution E-ATM.sln
+install
+  - nuget restore E-ATM.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script
+  - xbuild /p:Configuration=Release E-ATM.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./E-ATM.Tests/bin/Release/E-ATM.Tests.dll
