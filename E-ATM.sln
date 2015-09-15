@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-ATM.Client", "E-ATM.Client\E-ATM.Client.csproj", "{B176EBEC-E758-4EFA-8968-6207140497B8}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-ATM.Library", "E-ATM.Library\E-ATM.Library.csproj", "{27D7AD8F-8357-443F-BED9-53626EE736CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-ATM.Tests", "E-ATM.Tests\E-ATM.Tests.csproj", "{BC859A64-F403-4E02-B4C7-48E9629F73AD}"
@@ -15,10 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B176EBEC-E758-4EFA-8968-6207140497B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B176EBEC-E758-4EFA-8968-6207140497B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B176EBEC-E758-4EFA-8968-6207140497B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B176EBEC-E758-4EFA-8968-6207140497B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{27D7AD8F-8357-443F-BED9-53626EE736CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{27D7AD8F-8357-443F-BED9-53626EE736CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27D7AD8F-8357-443F-BED9-53626EE736CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
