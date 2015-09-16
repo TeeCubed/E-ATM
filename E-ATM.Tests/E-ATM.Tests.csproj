@@ -50,11 +50,18 @@
     <Otherwise />
   </Choose>
   <ItemGroup>
+    <Compile Include="CardVerificationTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\E-ATM.Library\E-ATM.Library.csproj">
+      <Project>{27D7AD8F-8357-443F-BED9-53626EE736CA}</Project>
+      <Name>E-ATM.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
