@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using E_ATM.Library;
 
 namespace E_ATM.Client
 {
@@ -20,9 +21,35 @@ namespace E_ATM.Client
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ATM atm;
+
         public MainWindow()
         {
             InitializeComponent();
+
+            atm = new ATM();
+        }
+
+        private void btn_InsertCard_Click(object sender, RoutedEventArgs e)
+        {
+            Card card = new Card();
+
+            var guid = Guid.NewGuid();
+
+            card.Id = guid;
+            card.Status = CardStatus.Active;
+
+
+            var validateResult = atm.ValidateCard(card);
+
+            if (validateResult)
+            {
+                txt_Screen.Text = "Enter Pin: ";
+            }
+            else
+            {
+                txt_Screen.Text = "Invalid Card!";
+            }
         }
     }
 }
