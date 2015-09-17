@@ -39,6 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ATM.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="CardStatus.cs" />
+    <Compile Include="IATM.cs" />
+    <Compile Include="ICard.cs" />
+    <Compile Include="IDebitCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
