@@ -43,11 +43,18 @@ namespace E_ATM.Client
 
             if (validateResult)
             {
-                MainWindow.txt_Screen.Text = "Enter Pin: ";
+                MainWindow.lbl_M1.FontSize = 20;
+                MainWindow.lbl_M1.Content = "Enter Pin: ";
+
+                double thickness = MainWindow.lbl_M2.BorderThickness.Bottom + 3;
+                MainWindow.lbl_M2.BorderThickness = new Thickness(thickness);
+
+
             }
             else
             {
-                MainWindow.txt_Screen.Text = "Invalid Card!";
+                MainWindow.lbl_M2.FontSize = 20;
+                MainWindow.lbl_M2.Content = "Invalid Card!";
             }
 
             this.Close();
