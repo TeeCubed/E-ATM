@@ -10,7 +10,7 @@ namespace E_ATM.Library
     {
         public bool ValidateCard(ICard card)
         {
-            if (card.Id != Guid.Empty && card.Status == CardStatus.Active)
+            if (card.Id != Guid.Empty && card.Status == CardStatus.Active && card.Bin.Length == 16)
                 return true;
 
             return false;

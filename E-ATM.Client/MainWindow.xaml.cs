@@ -21,35 +21,21 @@ namespace E_ATM.Client
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ATM atm;
+        public ATM Atm { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
 
-            atm = new ATM();
+            Atm = new ATM();
         }
 
         private void btn_InsertCard_Click(object sender, RoutedEventArgs e)
         {
-            Card card = new Card();
-
-            var guid = Guid.NewGuid();
-
-            card.Id = guid;
-            card.Status = CardStatus.Active;
+            InsertCard insertCardWindow = new InsertCard(this);
+            insertCardWindow.Show();
 
 
-            var validateResult = atm.ValidateCard(card);
-
-            if (validateResult)
-            {
-                txt_Screen.Text = "Enter Pin: ";
-            }
-            else
-            {
-                txt_Screen.Text = "Invalid Card!";
-            }
         }
     }
 }

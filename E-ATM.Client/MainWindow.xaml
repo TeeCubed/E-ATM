@@ -3,31 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="634.63" Width="1114.688">
     <Grid Margin="0,0,2,6">
-        <Button Content="1" HorizontalAlignment="Left" Height="60" Margin="222,304,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="2" HorizontalAlignment="Left" Height="60" Margin="287,304,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632"/>
-        <Button Content="3" HorizontalAlignment="Left" Height="60" Margin="352,304,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="4" HorizontalAlignment="Left" Height="60" Margin="222,369,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="5" HorizontalAlignment="Left" Height="60" Margin="287,369,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632"/>
-        <Button Content="6" HorizontalAlignment="Left" Height="60" Margin="352,369,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="7" HorizontalAlignment="Left" Height="60" Margin="222,434,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="8" HorizontalAlignment="Left" Height="60" Margin="287,434,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632"/>
-        <Button Content="9" HorizontalAlignment="Left" Height="60" Margin="352,434,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_1" Content="1" HorizontalAlignment="Left" Height="60" Margin="222,304,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_2" Content="2" HorizontalAlignment="Left" Height="60" Margin="287,304,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632"/>
+        <Button x:Name="btn_3" Content="3" HorizontalAlignment="Left" Height="60" Margin="352,304,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_4" Content="4" HorizontalAlignment="Left" Height="60" Margin="222,369,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_5" Content="5" HorizontalAlignment="Left" Height="60" Margin="287,369,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632"/>
+        <Button x:Name="btn_6" Content="6" HorizontalAlignment="Left" Height="60" Margin="352,369,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_7" Content="7" HorizontalAlignment="Left" Height="60" Margin="222,434,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_8" Content="8" HorizontalAlignment="Left" Height="60" Margin="287,434,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632"/>
+        <Button x:Name="btn_9" Content="9" HorizontalAlignment="Left" Height="60" Margin="352,434,0,0" VerticalAlignment="Top" Width="60"/>
         <Button x:Name="btn_InsertCard" Content="Insert Card" HorizontalAlignment="Left" Height="46" Margin="818,20,0,0" VerticalAlignment="Top" Width="254" Click="btn_InsertCard_Click"/>
         <TextBox x:Name="txt_Screen" HorizontalAlignment="Left" Height="257" Margin="91,18,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="591"/>
-        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="15,20,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="15,150,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="15,215,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="15,85,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="699,20,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="699,150,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="699,215,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="699,85,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_L1" Content="" HorizontalAlignment="Left" Height="60" Margin="15,20,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_L3" Content="" HorizontalAlignment="Left" Height="60" Margin="15,150,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_L4" Content="" HorizontalAlignment="Left" Height="60" Margin="15,215,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_L2" Content="" HorizontalAlignment="Left" Height="60" Margin="15,85,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_R1" Content="" HorizontalAlignment="Left" Height="60" Margin="699,20,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_R3" Content="" HorizontalAlignment="Left" Height="60" Margin="699,150,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_R4" Content="" HorizontalAlignment="Left" Height="60" Margin="699,215,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_R2" Content="" HorizontalAlignment="Left" Height="60" Margin="699,85,0,0" VerticalAlignment="Top" Width="60"/>
         <Button Content="" HorizontalAlignment="Left" Height="60" Margin="222,499,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button Content="0" HorizontalAlignment="Left" Height="60" Margin="287,499,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632"/>
+        <Button x:Name="btn_0" Content="0" HorizontalAlignment="Left" Height="60" Margin="287,499,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632"/>
         <Button Content="" HorizontalAlignment="Left" Height="60" Margin="352,499,0,0" VerticalAlignment="Top" Width="60"/>
-        <Button x:Name="Cancel" Content="Cancel" HorizontalAlignment="Left" Height="60" Margin="454,304,0,0" VerticalAlignment="Top" Width="78" Background="#FFFF6666"/>
-        <Button x:Name="Clear" Content="Clear" HorizontalAlignment="Left" Height="60" Margin="454,369,0,0" VerticalAlignment="Top" Width="78" Background="#FFFDFD47"/>
-        <Button x:Name="Enter" Content="Enter" HorizontalAlignment="Left" Height="60" Margin="454,434,0,0" VerticalAlignment="Top" Width="78" Background="#FF8DEA78"/>
+        <Button x:Name="btn_Cancel" Content="Cancel" HorizontalAlignment="Left" Height="60" Margin="454,304,0,0" VerticalAlignment="Top" Width="78" Background="#FFFF6666"/>
+        <Button x:Name="btn_Clear" Content="Clear" HorizontalAlignment="Left" Height="60" Margin="454,369,0,0" VerticalAlignment="Top" Width="78" Background="#FFFDFD47"/>
+        <Button x:Name="btn_Enter" Content="Enter" HorizontalAlignment="Left" Height="60" Margin="454,434,0,0" VerticalAlignment="Top" Width="78" Background="#FF8DEA78"/>
         <Button Content="" HorizontalAlignment="Left" Height="60" Margin="454,499,0,0" VerticalAlignment="Top" Width="78"/>
 
     </Grid>

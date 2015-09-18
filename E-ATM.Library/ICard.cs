@@ -12,5 +12,6 @@ namespace E_ATM.Library
         int Pin { get; set; }
         Decimal Balance { get; set; }
         CardStatus Status { get; set; }
+        String Bin { get; set; }
     }
 }
