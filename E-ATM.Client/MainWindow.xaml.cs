@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -12,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using E_ATM.Library;
 
 namespace E_ATM.Client
@@ -198,6 +201,45 @@ namespace E_ATM.Client
         private void btn_Clear_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btn_Enter_Click(object sender, RoutedEventArgs e)
+        {
+            lbl_M1.Content = "";
+            lbl_M2.FontSize = 16;
+            double thickness = lbl_M2.BorderThickness.Bottom - 3;
+            lbl_M2.BorderThickness = new Thickness(thickness);
+
+            if (Atm.UserString == "1234")
+            {
+                lbl_M2.Content = "Login Successful!";
+
+                Dispatcher.Invoke(new Action(() => { }), DispatcherPriority.ContextIdle, null);
+
+                Thread.Sleep(3000);
+
+                lbl_M2.Content = "";
+                lbl_L1.Content = "WITHDRAW CASH";
+                lbl_L2.Content = "WITHDRAW CASH WITH RECIPT";
+                lbl_L3.Content = "DISPLAY BALANCE";
+                lbl_L4.Content = "MINI STATEMENT";
+
+                lbl_R1.Content = "ACCOUNT SERVICES";
+                lbl_R2.Content = "INFORMATION ON SERVICES";
+                lbl_R3.Content = "CHANGE PIN";
+                lbl_R4.Content = "OTHER";
+
+            }
+            else
+            {
+                lbl_M2.Content = "Invalid Login.";
+            }
+
+            Dispatcher.Invoke(new Action(() => { }), DispatcherPriority.ContextIdle, null);
+
+            Thread.Sleep(1500);
+
+            lbl_M2.Content = "";
         }
     }
 }

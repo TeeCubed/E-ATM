@@ -27,9 +27,9 @@
         <Button Content="" HorizontalAlignment="Left" Height="60" Margin="225,495,0,0" VerticalAlignment="Top" Width="60"/>
         <Button x:Name="btn_Cancel" Content="Cancel" HorizontalAlignment="Left" Height="60" Margin="327,300,0,0" VerticalAlignment="Top" Width="78" Background="#FFFF6666"/>
         <Button x:Name="btn_Clear" Content="Clear" HorizontalAlignment="Left" Height="60" Margin="327,365,0,0" VerticalAlignment="Top" Width="78" Background="#FFFDFD47" Click="btn_Clear_Click"/>
-        <Button x:Name="btn_Enter" Content="Enter" HorizontalAlignment="Left" Height="60" Margin="327,430,0,0" VerticalAlignment="Top" Width="78" Background="#FF8DEA78"/>
+        <Button x:Name="btn_Enter" Content="Enter" HorizontalAlignment="Left" Height="60" Margin="327,430,0,0" VerticalAlignment="Top" Width="78" Background="#FF8DEA78" Click="btn_Enter_Click"/>
         <Button Content="" HorizontalAlignment="Left" Height="60" Margin="327,495,0,0" VerticalAlignment="Top" Width="78"/>
-        <Label Content="Label" HorizontalAlignment="Left" Height="45" Margin="483,510,0,0" VerticalAlignment="Top" Width="199" BorderThickness="2" BorderBrush="Black"/>
+        <Label Content="" HorizontalAlignment="Left" Height="45" Margin="483,510,0,0" VerticalAlignment="Top" Width="199" BorderThickness="2" BorderBrush="Black"/>
         <Label Content="Cash" HorizontalAlignment="Left" Height="30" Margin="553,475,0,0" VerticalAlignment="Top" Width="52" FontWeight="Bold" FontSize="16"/>
         <Label x:Name="lbl_L1" Content="" HorizontalAlignment="Left" Height="47" Margin="80,33,0,0" VerticalAlignment="Top" Width="196"/>
         <Label x:Name="lbl_L2" Content="" HorizontalAlignment="Left" Height="47" Margin="80,98,0,0" VerticalAlignment="Top" Width="196"/>
