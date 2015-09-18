@@ -32,6 +32,7 @@ namespace E_ATM.Tests
         public void CardVerificationSucceedsIfNotEmptyGuid()
         {
             card.Id = Guid.NewGuid();
+            card.Bin = "1234567890987654";
             Assert.AreEqual(true, atm.ValidateCard(card));
         }
 
@@ -40,6 +41,7 @@ namespace E_ATM.Tests
         {
             card.Id = Guid.NewGuid();
             card.Status = CardStatus.Active;
+            card.Bin = "1234567890987654";
             Assert.AreEqual(true, atm.ValidateCard(card));
         }
 
