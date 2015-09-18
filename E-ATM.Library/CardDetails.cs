@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace E_ATM.Library
 {
-    public class Card : ICard
+    public class CardDetails
     {
         public string BIN { get; set; }
+        public int PIN { get; set; }
+        public CardStatus Status { get; set; }
     }
 }

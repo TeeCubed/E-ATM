@@ -22,48 +22,65 @@ namespace E_ATM.Tests
         }
 
         [Test]
-        public void CardVerificationFailsIfEmptyGuid()
+        public void CardVerificationFailsIfEmptyBIN()
         {
-            card.Id = Guid.Empty;
+            card.BIN = String.Empty;
             Assert.AreEqual(false,atm.ValidateCard(card));
+        }
+
+        [Test]
+        public void CardVerificationFailsIfBINLengthInvalid()
+        {
+            card.BIN = "123212315454552";
+            Assert.AreEqual(false, atm.ValidateCard(card));
+        }
+
+        [Test]
+        public void CardVerificationFailsIfDefaultBIN()
+        {
+            card.BIN = "0000000000000000";
+            Assert.AreEqual(false, atm.ValidateCard(card));
         }
 
         [Test]
         public void CardVerificationSucceedsIfNotEmptyGuid()
         {
-            card.Id = Guid.NewGuid();
+            card.BIN = "1234123412341234";
             Assert.AreEqual(true, atm.ValidateCard(card));
         }
 
         [Test]
         public void CardVerificationSucceedsIfActive()
         {
-            card.Id = Guid.NewGuid();
-            card.Status = CardStatus.Active;
+            card.BIN = "1234123412341234";
             Assert.AreEqual(true, atm.ValidateCard(card));
         }
 
         [Test]
         public void CardVerificationFailsIfBlocked()
         {
-            card.Id = Guid.NewGuid();
-            card.Status = CardStatus.Blocked;
+            card.BIN = "1234123412341235";
             Assert.AreEqual(false, atm.ValidateCard(card));
         }
 
         [Test]
         public void CardVerificationFailsIfCancelled()
         {
-            card.Id = Guid.NewGuid();
-            card.Status = CardStatus.Cancelled;
+            card.BIN = "1234123412341236";
             Assert.AreEqual(false, atm.ValidateCard(card));
         }
 
         [Test]
         public void CardVerificationFailsIfExpired()
         {
-            card.Id = Guid.NewGuid();
-            card.Status = CardStatus.Expired;
+            card.BIN = "1234123412341237";
+            Assert.AreEqual(false, atm.ValidateCard(card));
+        }
+
+        [Test]
+        public void CardVerificationFailsIfCardIsNull()
+        {
+            card = null;
             Assert.AreEqual(false, atm.ValidateCard(card));
         }
     }

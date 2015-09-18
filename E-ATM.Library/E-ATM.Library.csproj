@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="ATM.cs" />
     <Compile Include="Card.cs" />
+    <Compile Include="CardDetails.cs" />
     <Compile Include="CardStatus.cs" />
     <Compile Include="IATM.cs" />
     <Compile Include="ICard.cs" />
