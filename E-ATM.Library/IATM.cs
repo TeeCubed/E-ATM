@@ -10,7 +10,7 @@ namespace E_ATM.Library
     public interface IATM
     {
         bool ValidateCard(ICard insertedCard);
-        bool AuthorizeLogin(int pin);
+        bool AuthorizeLogin(ICard insertedCard, int pin);
         void Withdraw(decimal amount);
     }
 }

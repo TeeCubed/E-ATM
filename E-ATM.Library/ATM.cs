@@ -24,6 +24,7 @@ namespace E_ATM.Library
         /// <returns></returns>
         public bool ValidateCard(ICard insertedCard)
         {
+            card.BIN = insertedCard.BIN;
             if (insertedCard != null)
             {
                 return atmServer.ValidateCard(insertedCard.BIN);
@@ -32,10 +33,10 @@ namespace E_ATM.Library
             return false;
         }
 
-        public bool AuthorizeLogin(int pin)
+        public bool AuthorizeLogin(ICard insertedCard, int pin)
         {
-            if (card.PIN == pin)
-                return true;
+            if (pin.ToString().Length == 4)
+                return atmServer.AuthorizeCard(insertedCard.BIN, pin);
 
             return false;
         }

@@ -6,32 +6,32 @@
       <xsd:import schemaLocation="http://localhost:51479/ATMServer.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IATMServer_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
-  </wsdl:message>
-  <wsdl:message name="IATMServer_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
-  </wsdl:message>
   <wsdl:message name="IATMServer_ValidateCard_InputMessage">
     <wsdl:part name="parameters" element="tns:ValidateCard" />
   </wsdl:message>
   <wsdl:message name="IATMServer_ValidateCard_OutputMessage">
     <wsdl:part name="parameters" element="tns:ValidateCardResponse" />
   </wsdl:message>
+  <wsdl:message name="IATMServer_AuthorizeCard_InputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeCard" />
+  </wsdl:message>
+  <wsdl:message name="IATMServer_AuthorizeCard_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AuthorizeCardResponse" />
+  </wsdl:message>
   <wsdl:portType name="IATMServer">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IATMServer/DoWork" message="tns:IATMServer_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IATMServer/DoWorkResponse" message="tns:IATMServer_DoWork_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="ValidateCard">
       <wsdl:input wsaw:Action="http://tempuri.org/IATMServer/ValidateCard" message="tns:IATMServer_ValidateCard_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IATMServer/ValidateCardResponse" message="tns:IATMServer_ValidateCard_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="AuthorizeCard">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATMServer/AuthorizeCard" message="tns:IATMServer_AuthorizeCard_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATMServer/AuthorizeCardResponse" message="tns:IATMServer_AuthorizeCard_OutputMessage" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IATMServer" type="tns:IATMServer">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/IATMServer/DoWork" style="document" />
+    <wsdl:operation name="ValidateCard">
+      <soap:operation soapAction="http://tempuri.org/IATMServer/ValidateCard" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -39,8 +39,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="ValidateCard">
-      <soap:operation soapAction="http://tempuri.org/IATMServer/ValidateCard" style="document" />
+    <wsdl:operation name="AuthorizeCard">
+      <soap:operation soapAction="http://tempuri.org/IATMServer/AuthorizeCard" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

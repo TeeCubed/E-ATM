@@ -12,10 +12,6 @@ namespace E_ATM.Server
     // NOTE: In order to launch WCF Test Client for testing this service, please select ATMServer.svc or ATMServer.svc.cs at the Solution Explorer and start debugging.
     public class ATMServer : IATMServer
     {
-        public void DoWork()
-        {
-        }
-
         public bool ValidateCard(string BIN)
         {
             var card = GetCardByBIN(BIN);
@@ -24,6 +20,24 @@ namespace E_ATM.Server
             {
                 if (card.BIN != "0000000000000000" && card.BIN.Length == 16 && card.Status == CardStatus.Active)
                     return true;
+            }
+
+            return false;
+        }
+
+        public bool AuthorizeCard(string BIN, int pin)
+        {
+            // Pull from Database
+            var details = new CardDetails();
+            details.BIN = BIN;
+
+            // Test data <<< To be populated in the Database once created - shouldn't be here!!! >>>
+            switch (pin)
+            {
+                case 1234:
+                    return true;
+                default:
+                    break;
             }
 
             return false;

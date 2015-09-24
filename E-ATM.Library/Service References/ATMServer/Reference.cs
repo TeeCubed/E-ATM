@@ -15,17 +15,17 @@ namespace E_ATM.Library.ATMServer {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ATMServer.IATMServer")]
     public interface IATMServer {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/DoWork", ReplyAction="http://tempuri.org/IATMServer/DoWorkResponse")]
-        void DoWork();
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/DoWork", ReplyAction="http://tempuri.org/IATMServer/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/ValidateCard", ReplyAction="http://tempuri.org/IATMServer/ValidateCardResponse")]
+        bool ValidateCard(string BIN);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/ValidateCard", ReplyAction="http://tempuri.org/IATMServer/ValidateCardResponse")]
-        bool ValidateCard(string card);
+        System.Threading.Tasks.Task<bool> ValidateCardAsync(string BIN);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/ValidateCard", ReplyAction="http://tempuri.org/IATMServer/ValidateCardResponse")]
-        System.Threading.Tasks.Task<bool> ValidateCardAsync(string card);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/AuthorizeCard", ReplyAction="http://tempuri.org/IATMServer/AuthorizeCardResponse")]
+        bool AuthorizeCard(string BIN, int pin);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/AuthorizeCard", ReplyAction="http://tempuri.org/IATMServer/AuthorizeCardResponse")]
+        System.Threading.Tasks.Task<bool> AuthorizeCardAsync(string BIN, int pin);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -55,20 +55,20 @@ namespace E_ATM.Library.ATMServer {
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
+        public bool ValidateCard(string BIN) {
+            return base.Channel.ValidateCard(BIN);
         }
         
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
+        public System.Threading.Tasks.Task<bool> ValidateCardAsync(string BIN) {
+            return base.Channel.ValidateCardAsync(BIN);
         }
         
-        public bool ValidateCard(string card) {
-            return base.Channel.ValidateCard(card);
+        public bool AuthorizeCard(string BIN, int pin) {
+            return base.Channel.AuthorizeCard(BIN, pin);
         }
         
-        public System.Threading.Tasks.Task<bool> ValidateCardAsync(string card) {
-            return base.Channel.ValidateCardAsync(card);
+        public System.Threading.Tasks.Task<bool> AuthorizeCardAsync(string BIN, int pin) {
+            return base.Channel.AuthorizeCardAsync(BIN, pin);
         }
     }
 }

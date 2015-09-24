@@ -13,9 +13,9 @@ namespace E_ATM.Server
     public interface IATMServer
     {
         [OperationContract]
-        void DoWork();
+        bool ValidateCard(string BIN);
 
         [OperationContract]
-        bool ValidateCard(string card);
+        bool AuthorizeCard(string BIN, int pin);
     }
 }
