@@ -9,7 +9,11 @@ namespace E_ATM.Library
 {
     public class ATM : IATM
     {
-        private ATMServerClient atmServer;
+		private ATMServerClient atmServer;
+	
+        public Double UserInput { get; set; }
+        public String UserString { get; set; }
+		public ATMState State { get; set; }
 
         public ATM()
         {

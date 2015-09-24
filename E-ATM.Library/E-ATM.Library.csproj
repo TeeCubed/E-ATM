@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ATM.cs" />
+    <Compile Include="AtmState.cs" />
     <Compile Include="Card.cs" />
     <Compile Include="CardDetails.cs" />
     <Compile Include="CardStatus.cs" />

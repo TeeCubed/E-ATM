@@ -1,8 +1,48 @@
 ﻿<Window x:Class="E_ATM.Client.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="613.63" Width="781.688">
+    <Grid Margin="0,0,2,6">
+        <Button x:Name="btn_1" Content="1" HorizontalAlignment="Left" Height="60" Margin="95,300,0,0" VerticalAlignment="Top" Width="60" Click="btn_1_Click"/>
+        <Button x:Name="btn_2" Content="2" HorizontalAlignment="Left" Height="60" Margin="160,300,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632" Click="btn_2_Click"/>
+        <Button x:Name="btn_3" Content="3" HorizontalAlignment="Left" Height="60" Margin="225,300,0,0" VerticalAlignment="Top" Width="60" Click="btn_3_Click"/>
+        <Button x:Name="btn_4" Content="4" HorizontalAlignment="Left" Height="60" Margin="95,365,0,0" VerticalAlignment="Top" Width="60" Click="btn_4_Click"/>
+        <Button x:Name="btn_5" Content="5" HorizontalAlignment="Left" Height="60" Margin="160,365,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632" Click="btn_5_Click"/>
+        <Button x:Name="btn_6" Content="6" HorizontalAlignment="Left" Height="60" Margin="225,365,0,0" VerticalAlignment="Top" Width="60" Click="btn_6_Click"/>
+        <Button x:Name="btn_7" Content="7" HorizontalAlignment="Left" Height="60" Margin="95,430,0,0" VerticalAlignment="Top" Width="60" Click="btn_7_Click"/>
+        <Button x:Name="btn_8" Content="8" HorizontalAlignment="Left" Height="60" Margin="160,430,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632" Click="btn_8_Click"/>
+        <Button x:Name="btn_9" Content="9" HorizontalAlignment="Left" Height="60" Margin="225,430,0,0" VerticalAlignment="Top" Width="60" Click="btn_9_Click"/>
+        <Button x:Name="btn_InsertCard" Content="Insert Card" HorizontalAlignment="Left" Height="46" Margin="483,300,0,0" VerticalAlignment="Top" Width="199" Click="btn_InsertCard_Click"/>
+        <TextBox x:Name="txt_Screen" HorizontalAlignment="Left" Height="265" Margin="80,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="614"/>
+        <Button x:Name="btn_L1" Content="" HorizontalAlignment="Left" Height="60" Margin="15,20,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_L3" Content="" HorizontalAlignment="Left" Height="60" Margin="15,150,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_L4" Content="" HorizontalAlignment="Left" Height="60" Margin="15,215,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_L2" Content="" HorizontalAlignment="Left" Height="60" Margin="15,85,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_R1" Content="" HorizontalAlignment="Left" Height="60" Margin="699,20,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_R3" Content="" HorizontalAlignment="Left" Height="60" Margin="699,150,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_R4" Content="" HorizontalAlignment="Left" Height="60" Margin="699,215,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_R2" Content="" HorizontalAlignment="Left" Height="60" Margin="699,85,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="95,495,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_0" Content="0" HorizontalAlignment="Left" Height="60" Margin="160,495,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632" Click="btn_0_Click"/>
+        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="225,495,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_Cancel" Content="Cancel" HorizontalAlignment="Left" Height="60" Margin="327,300,0,0" VerticalAlignment="Top" Width="78" Background="#FFFF6666"/>
+        <Button x:Name="btn_Clear" Content="Clear" HorizontalAlignment="Left" Height="60" Margin="327,365,0,0" VerticalAlignment="Top" Width="78" Background="#FFFDFD47" Click="btn_Clear_Click"/>
+        <Button x:Name="btn_Enter" Content="Enter" HorizontalAlignment="Left" Height="60" Margin="327,430,0,0" VerticalAlignment="Top" Width="78" Background="#FF8DEA78" Click="btn_Enter_Click"/>
+        <Button Content="" HorizontalAlignment="Left" Height="60" Margin="327,495,0,0" VerticalAlignment="Top" Width="78"/>
+        <Label Content="" HorizontalAlignment="Left" Height="45" Margin="483,510,0,0" VerticalAlignment="Top" Width="199" BorderThickness="2" BorderBrush="Black"/>
+        <Label Content="Cash" HorizontalAlignment="Left" Height="30" Margin="553,475,0,0" VerticalAlignment="Top" Width="52" FontWeight="Bold" FontSize="16"/>
+        <Label x:Name="lbl_L1" Content="" HorizontalAlignment="Left" Height="47" Margin="80,33,0,0" VerticalAlignment="Top" Width="196"/>
+        <Label x:Name="lbl_L2" Content="" HorizontalAlignment="Left" Height="47" Margin="80,98,0,0" VerticalAlignment="Top" Width="196"/>
+        <Label x:Name="lbl_L3" Content="" HorizontalAlignment="Left" Height="47" Margin="80,163,0,0" VerticalAlignment="Top" Width="196"/>
+        <Label x:Name="lbl_L4" Content="" HorizontalAlignment="Left" Height="47" Margin="80,228,0,0" VerticalAlignment="Top" Width="196"/>
+        <Label x:Name="lbl_M1" Content="" HorizontalAlignment="Left" Height="47" Margin="281,33,0,0" VerticalAlignment="Top" Width="212" RenderTransformOrigin="1.716,0.511"/>
+        <Label x:Name="lbl_M2" Content="       ATM" HorizontalAlignment="Left" Height="47" Margin="281,98,0,0" VerticalAlignment="Top" Width="212" BorderThickness="0" BorderBrush="Black" FontSize="32"/>
+        <Label x:Name="lbl_M3" Content="" HorizontalAlignment="Left" Height="47" Margin="281,163,0,0" VerticalAlignment="Top" Width="212"/>
+        <Label x:Name="lbl_M4" Content="          Please insert your card" HorizontalAlignment="Left" Height="47" Margin="281,228,0,0" VerticalAlignment="Top" Width="212"/>
+        <Label x:Name="lbl_R1" Content="" HorizontalAlignment="Left" Height="47" Margin="498,33,0,0" VerticalAlignment="Top" Width="196" FlowDirection="RightToLeft"/>
+        <Label x:Name="lbl_R2" Content="" HorizontalAlignment="Left" Height="47" Margin="498,98,0,0" VerticalAlignment="Top" Width="196" FlowDirection="RightToLeft"/>
+        <Label x:Name="lbl_R3" Content="" HorizontalAlignment="Left" Height="47" Margin="498,163,0,0" VerticalAlignment="Top" Width="196" FlowDirection="RightToLeft"/>
+        <Label x:Name="lbl_R4" Content="" HorizontalAlignment="Left" Height="47" Margin="498,228,0,0" VerticalAlignment="Top" Width="196" FlowDirection="RightToLeft"/>
+
     </Grid>
 </Window>
