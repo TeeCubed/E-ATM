@@ -9,7 +9,6 @@ namespace E_ATM.Library
 {
     public class ATM : IATM
     {
-        private CardDetails card;
         private ATMServerClient atmServer;
 
         public ATM()
@@ -24,7 +23,6 @@ namespace E_ATM.Library
         /// <returns></returns>
         public bool ValidateCard(ICard insertedCard)
         {
-            card.BIN = insertedCard.BIN;
             if (insertedCard != null)
             {
                 return atmServer.ValidateCard(insertedCard.BIN);
