@@ -9,9 +9,8 @@ namespace E_ATM.Library
 {
     public interface IATM
     {
-        ATMState State { get; set; }
         bool ValidateCard(ICard insertedCard);
-        bool AuthorizeLogin(ICard insertedCard, int pin);
-        void Withdraw(ICard card, decimal amount);
+        bool AuthorizeLogin(int pin);
+        void Withdraw(decimal amount);
     }
 }

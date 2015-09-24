@@ -83,21 +83,5 @@ namespace E_ATM.Tests
             card = null;
             Assert.AreEqual(false, atm.ValidateCard(card));
         }
-
-        [Test]
-        public void CardAuthorizationFailsIfInvalidPIN()
-        {
-            int pin = 1111;
-            card.BIN = "1234123412341234";
-            Assert.AreEqual(false, atm.AuthorizeLogin(card, pin));
-        }
-
-        [Test]
-        public void CardAuthorizationSucceedsIfValidPIN()
-        {
-            int pin = 1234;
-            card.BIN = "1234123412341234";
-            Assert.AreEqual(true, atm.AuthorizeLogin(card, pin));
-        }
     }
 }
