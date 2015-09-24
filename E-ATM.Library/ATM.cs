@@ -3,45 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using E_ATM.Library.ATMServer;
 
 namespace E_ATM.Library
 {
     public class ATM : IATM
     {
-        private CardDetails card;
+		private ATMServerClient atmServer;
+	
+        public Double UserInput { get; set; }
+        public String UserString { get; set; }
+		public ATMState State { get; set; }
 
-        /// <summary>
-        /// Pull card details from database based on provided BIN.
-        /// </summary>
-        /// <param name="card"></param>
-        /// <returns></returns>
-        private void PullCardDetails(ICard insertedCard)
+        public ATM()
         {
-            // Pull from Database
-            var details = new CardDetails();
-            details.BIN = insertedCard.BIN;
-
-            // Test data <<< To be populated in the Database once created - shouldn't be here!!! >>>
-            switch (details.BIN)
-            {
-                case "1234123412341234":
-                    details.Status = CardStatus.Active;
-                    break;
-                case "1234123412341235":
-                    details.Status = CardStatus.Blocked;
-                    break;
-                case "1234123412341236":
-                    details.Status = CardStatus.Cancelled;
-                    break;
-                case "1234123412341237":
-                    details.Status = CardStatus.Expired;
-                    break;
-                default:
-                    break;
-            }
-
-            // Set ATM's current card
-            card = details;
+            atmServer = new ATMServerClient();
         }
 
         /// <summary>
@@ -53,28 +29,21 @@ namespace E_ATM.Library
         {
             if (insertedCard != null)
             {
-                PullCardDetails(insertedCard);
-                if (card != null)
-                {
-                    if (card.BIN != "0000000000000000" && card.BIN.Length == 16 && card.Status == CardStatus.Active)
-                        return true;
-                }
-
-                return false;
+                return atmServer.ValidateCard(insertedCard.BIN);
             }
 
             return false;
         }
 
-        public bool AuthorizeLogin(int pin)
+        public bool AuthorizeLogin(ICard insertedCard, int pin)
         {
-            if (card.PIN == pin)
-                return true;
+            if (pin.ToString().Length == 4)
+                return atmServer.AuthorizeCard(insertedCard.BIN, pin);
 
             return false;
         }
 
-        public void Withdraw(decimal amount)
+        public void Withdraw(ICard insertedCard, decimal amount)
         {
             throw new NotImplementedException();
         }

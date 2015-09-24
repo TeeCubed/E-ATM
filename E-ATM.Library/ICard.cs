@@ -8,6 +8,10 @@ namespace E_ATM.Library
 {
     public interface ICard
     {
-        string BIN { get; set; }
+        Guid Id { get; set; }
+        int Pin { get; set; }
+        Decimal Balance { get; set; }
+        CardStatus Status { get; set; }
+        String BIN { get; set; }
     }
 }
