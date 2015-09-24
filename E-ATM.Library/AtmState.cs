@@ -7,6 +7,7 @@ namespace E_ATM.Library
 {
     public enum ATMState
     {
-        Pin
+        Pin,
+        Menu
     }
 }
