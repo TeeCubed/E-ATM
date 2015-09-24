@@ -47,5 +47,13 @@ namespace E_ATM.Library
         {
             throw new NotImplementedException();
         }
+
+        public bool ChangePin(ICard insertedCard, int pin)
+        {
+            if (pin.ToString().Length == 4)
+                return atmServer.ChangePIN(insertedCard.BIN, pin);
+
+            return false;
+        }
     }
 }

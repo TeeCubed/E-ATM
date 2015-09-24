@@ -26,6 +26,12 @@ namespace E_ATM.Library.ATMServer {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/AuthorizeCard", ReplyAction="http://tempuri.org/IATMServer/AuthorizeCardResponse")]
         System.Threading.Tasks.Task<bool> AuthorizeCardAsync(string BIN, int pin);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/ChangePIN", ReplyAction="http://tempuri.org/IATMServer/ChangePINResponse")]
+        bool ChangePIN(string BIN, int pin);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IATMServer/ChangePIN", ReplyAction="http://tempuri.org/IATMServer/ChangePINResponse")]
+        System.Threading.Tasks.Task<bool> ChangePINAsync(string BIN, int pin);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +75,14 @@ namespace E_ATM.Library.ATMServer {
         
         public System.Threading.Tasks.Task<bool> AuthorizeCardAsync(string BIN, int pin) {
             return base.Channel.AuthorizeCardAsync(BIN, pin);
+        }
+        
+        public bool ChangePIN(string BIN, int pin) {
+            return base.Channel.ChangePIN(BIN, pin);
+        }
+        
+        public System.Threading.Tasks.Task<bool> ChangePINAsync(string BIN, int pin) {
+            return base.Channel.ChangePINAsync(BIN, pin);
         }
     }
 }

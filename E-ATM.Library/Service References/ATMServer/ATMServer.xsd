@@ -29,4 +29,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ChangePIN">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="BIN" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pin" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChangePINResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ChangePINResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

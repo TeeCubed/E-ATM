@@ -17,5 +17,8 @@ namespace E_ATM.Server
 
         [OperationContract]
         bool AuthorizeCard(string BIN, int pin);
+
+        [OperationContract]
+        bool ChangePIN(string BIN, int pin);
     }
 }
