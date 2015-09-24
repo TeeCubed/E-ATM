@@ -154,8 +154,3 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
-packages/NUnit.2.6.4/lib/nunit.framework.dll
-packages/NUnit.2.6.4/lib/nunit.framework.xml
-packages/NUnit.2.6.4/license.txt
-packages/NUnit.2.6.4/NUnit.2.6.4.nupkg
-packages/NUnit.2.6.4/NUnit.2.6.4.nuspec
