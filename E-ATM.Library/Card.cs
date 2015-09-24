@@ -7,9 +7,12 @@ using System.Threading.Tasks;
 
 namespace E_ATM.Library
 {
-    [DataContract]
     public class Card : ICard
     {
-        public string BIN { get; set; }
+        public Guid Id { get; set; }
+        public int Pin { get; set; }
+        public decimal Balance { get; set; }
+        public CardStatus Status { get; set; }
+        public String BIN { get; set; }
     }
 }

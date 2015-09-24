@@ -9,7 +9,11 @@ namespace E_ATM.Library
 {
     public class ATM : IATM
     {
-        private ATMServerClient atmServer;
+		private ATMServerClient atmServer;
+
+        public Double UserInput { get; set; }
+        public String UserString { get; set; }
+		public ATMState State { get; set; }
 
         public ATM()
         {
@@ -39,7 +43,7 @@ namespace E_ATM.Library
             return false;
         }
 
-        public void Withdraw(decimal amount)
+        public void Withdraw(ICard card, decimal amount)
         {
             throw new NotImplementedException();
         }
