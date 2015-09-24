@@ -25,17 +25,21 @@ namespace E_ATM.Client
     public partial class MainWindow : Window
     {
         public ATM Atm { get; set; }
+        private MenuScreen display;
 
         public MainWindow()
         {
             InitializeComponent();
 
             Atm = new ATM();
-            
+            display = new MenuScreen(this);
         }
 
         private void btn_InsertCard_Click(object sender, RoutedEventArgs e)
         {
+            lbl_M4.Content = "";
+            lbl_M2.Content = "Processing...";
+
             InsertCard insertCardWindow = new InsertCard(this);
             insertCardWindow.Show();
         }
@@ -200,7 +204,8 @@ namespace E_ATM.Client
 
         private void btn_Clear_Click(object sender, RoutedEventArgs e)
         {
-
+            Atm.UserString = Atm.UserString.Remove(Atm.UserString.Length - 1, 1);
+            lbl_M2.Content = lbl_M2.Content.ToString().Remove(lbl_M2.Content.ToString().Length - 1, 1);
         }
 
         private void btn_Enter_Click(object sender, RoutedEventArgs e)
@@ -218,16 +223,7 @@ namespace E_ATM.Client
 
                 Thread.Sleep(3000);
 
-                lbl_M2.Content = "";
-                lbl_L1.Content = "WITHDRAW CASH";
-                lbl_L2.Content = "WITHDRAW CASH WITH RECIPT";
-                lbl_L3.Content = "DISPLAY BALANCE";
-                lbl_L4.Content = "MINI STATEMENT";
-
-                lbl_R1.Content = "ACCOUNT SERVICES";
-                lbl_R2.Content = "INFORMATION ON SERVICES";
-                lbl_R3.Content = "CHANGE PIN";
-                lbl_R4.Content = "OTHER";
+                display.DisplayMenu();
 
             }
             else

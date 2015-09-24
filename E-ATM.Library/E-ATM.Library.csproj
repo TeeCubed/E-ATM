@@ -46,7 +46,6 @@
     <Compile Include="IATM.cs" />
     <Compile Include="ICard.cs" />
     <Compile Include="IDebitCard.cs" />
-    <Compile Include="MainScreen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

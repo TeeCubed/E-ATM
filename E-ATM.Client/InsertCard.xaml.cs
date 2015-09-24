@@ -46,10 +46,9 @@ namespace E_ATM.Client
                 MainWindow.lbl_M1.FontSize = 20;
                 MainWindow.lbl_M1.Content = "Enter Pin: ";
 
+                MainWindow.lbl_M2.Content = "";
                 double thickness = MainWindow.lbl_M2.BorderThickness.Bottom + 3;
                 MainWindow.lbl_M2.BorderThickness = new Thickness(thickness);
-
-
             }
             else
             {
@@ -58,7 +57,6 @@ namespace E_ATM.Client
             }
 
             this.Close();
-
         }
     }
 }

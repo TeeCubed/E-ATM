@@ -36,13 +36,13 @@
         <Label x:Name="lbl_L3" Content="" HorizontalAlignment="Left" Height="47" Margin="80,163,0,0" VerticalAlignment="Top" Width="196"/>
         <Label x:Name="lbl_L4" Content="" HorizontalAlignment="Left" Height="47" Margin="80,228,0,0" VerticalAlignment="Top" Width="196"/>
         <Label x:Name="lbl_M1" Content="" HorizontalAlignment="Left" Height="47" Margin="281,33,0,0" VerticalAlignment="Top" Width="212" RenderTransformOrigin="1.716,0.511"/>
-        <Label x:Name="lbl_M2" Content="" HorizontalAlignment="Left" Height="47" Margin="281,98,0,0" VerticalAlignment="Top" Width="212" BorderThickness="0" BorderBrush="Black" FontSize="36"/>
+        <Label x:Name="lbl_M2" Content="       ATM" HorizontalAlignment="Left" Height="47" Margin="281,98,0,0" VerticalAlignment="Top" Width="212" BorderThickness="0" BorderBrush="Black" FontSize="32"/>
         <Label x:Name="lbl_M3" Content="" HorizontalAlignment="Left" Height="47" Margin="281,163,0,0" VerticalAlignment="Top" Width="212"/>
-        <Label x:Name="lbl_M4" Content="" HorizontalAlignment="Left" Height="47" Margin="281,228,0,0" VerticalAlignment="Top" Width="212"/>
-        <Label x:Name="lbl_R1" Content="" HorizontalAlignment="Left" Height="47" Margin="498,33,0,0" VerticalAlignment="Top" Width="196"/>
-        <Label x:Name="lbl_R2" Content="" HorizontalAlignment="Left" Height="47" Margin="498,98,0,0" VerticalAlignment="Top" Width="196"/>
-        <Label x:Name="lbl_R3" Content="" HorizontalAlignment="Left" Height="47" Margin="498,163,0,0" VerticalAlignment="Top" Width="196"/>
-        <Label x:Name="lbl_R4" Content="" HorizontalAlignment="Left" Height="47" Margin="498,228,0,0" VerticalAlignment="Top" Width="196"/>
+        <Label x:Name="lbl_M4" Content="          Please insert your card" HorizontalAlignment="Left" Height="47" Margin="281,228,0,0" VerticalAlignment="Top" Width="212"/>
+        <Label x:Name="lbl_R1" Content="" HorizontalAlignment="Left" Height="47" Margin="498,33,0,0" VerticalAlignment="Top" Width="196" FlowDirection="RightToLeft"/>
+        <Label x:Name="lbl_R2" Content="" HorizontalAlignment="Left" Height="47" Margin="498,98,0,0" VerticalAlignment="Top" Width="196" FlowDirection="RightToLeft"/>
+        <Label x:Name="lbl_R3" Content="" HorizontalAlignment="Left" Height="47" Margin="498,163,0,0" VerticalAlignment="Top" Width="196" FlowDirection="RightToLeft"/>
+        <Label x:Name="lbl_R4" Content="" HorizontalAlignment="Left" Height="47" Margin="498,228,0,0" VerticalAlignment="Top" Width="196" FlowDirection="RightToLeft"/>
 
     </Grid>
 </Window>
