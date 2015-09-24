@@ -36,7 +36,7 @@ namespace E_ATM.Client
 
             InsertedCard.Id = Guid.NewGuid();
             InsertedCard.Status = CardStatus.Active;
-            InsertedCard.Bin = txt_first4.Text + txt_second4.Text + txt_third4.Text + txt_last4.Text;
+            InsertedCard.BIN = txt_first4.Text + txt_second4.Text + txt_third4.Text + txt_last4.Text;
 
             var validateResult = MainWindow.Atm.ValidateCard(InsertedCard);
 

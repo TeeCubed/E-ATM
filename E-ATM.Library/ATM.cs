@@ -43,7 +43,7 @@ namespace E_ATM.Library
             return false;
         }
 
-        public void Withdraw(decimal amount)
+        public void Withdraw(ICard insertedCard, decimal amount)
         {
             throw new NotImplementedException();
         }
