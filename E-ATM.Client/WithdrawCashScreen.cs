@@ -3,36 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using E_ATM.Library;
 
 namespace E_ATM.Client
 {
-    public class MenuScreen : Screen
+    public class WithdrawCashScreen : Screen
     {
-        public MenuScreen(MainWindow mainWindow) : base(mainWindow)
+        public WithdrawCashScreen(MainWindow mainWindow) 
+            : base(mainWindow)
         {
-            _mainWindow.lbl_M2.Content = "";
             Display();
         }
-        
-        public override void Display()
-        {
-            _mainWindow.lbl_L1.FontSize = 12;
-            _mainWindow.lbl_L1.Content = "WITHDRAW CASH";
-            _mainWindow.lbl_L2.Content = "WITHDRAW CASH WITH RECEIPT";
-            _mainWindow.lbl_L3.Content = "DISPLAY BALANCE";
-            _mainWindow.lbl_L4.Content = "MINI STATEMENT";
-
-            _mainWindow.lbl_M1.Content = "";
-            _mainWindow.lbl_M2.Content = "";
-
-            _mainWindow.lbl_R1.Content = "ACCOUNT SERVICES";
-            _mainWindow.lbl_R2.Content = "INFORMATION ON SERVICES";
-            _mainWindow.lbl_R3.Content = "CHANGE PIN";
-            _mainWindow.lbl_R4.Content = "OTHER";
-        }
-
         public override void Button_Keypad1()
         {
             throw new NotImplementedException();
@@ -98,9 +78,25 @@ namespace E_ATM.Client
             throw new NotImplementedException();
         }
 
+        public override void Display()
+        {
+            _mainWindow.lbl_M1.Content = "Choose amount:";
+
+            _mainWindow.lbl_L1.FontSize = 10;
+            _mainWindow.lbl_L1.Content = "Menu";
+            _mainWindow.lbl_L2.Content = "£10";
+            _mainWindow.lbl_L3.Content = "£30";
+            _mainWindow.lbl_L4.Content = "£100";
+
+            _mainWindow.lbl_R1.Content = "";
+            _mainWindow.lbl_R2.Content = "20£";
+            _mainWindow.lbl_R3.Content = "50£";
+            _mainWindow.lbl_R4.Content = "OTHER"; 
+        }
+
         public override void Button_L1()
         {
-            _mainWindow.CurrentScreen = new WithdrawCashScreen(_mainWindow);
+            _mainWindow.CurrentScreen = new MenuScreen(_mainWindow);
         }
     }
 }

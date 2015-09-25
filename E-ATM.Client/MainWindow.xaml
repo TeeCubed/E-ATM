@@ -2,6 +2,15 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="613.63" Width="781.688">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <EventTrigger RoutedEvent="PreviewMouseDown">
+                    <SoundPlayerAction Source="click.wav" />
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
     <Grid Margin="0,0,2,6">
         <Button x:Name="btn_1" Content="1" HorizontalAlignment="Left" Height="60" Margin="95,300,0,0" VerticalAlignment="Top" Width="60" Click="btn_1_Click"/>
         <Button x:Name="btn_2" Content="2" HorizontalAlignment="Left" Height="60" Margin="160,300,0,0" VerticalAlignment="Top" Width="60" RenderTransformOrigin="1.777,0.632" Click="btn_2_Click"/>
@@ -14,7 +23,7 @@
         <Button x:Name="btn_9" Content="9" HorizontalAlignment="Left" Height="60" Margin="225,430,0,0" VerticalAlignment="Top" Width="60" Click="btn_9_Click"/>
         <Button x:Name="btn_InsertCard" Content="Insert Card" HorizontalAlignment="Left" Height="46" Margin="483,300,0,0" VerticalAlignment="Top" Width="199" Click="btn_InsertCard_Click"/>
         <TextBox x:Name="txt_Screen" HorizontalAlignment="Left" Height="265" Margin="80,20,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="614"/>
-        <Button x:Name="btn_L1" Content="" HorizontalAlignment="Left" Height="60" Margin="15,20,0,0" VerticalAlignment="Top" Width="60"/>
+        <Button x:Name="btn_L1" Content="" HorizontalAlignment="Left" Height="60" Margin="15,20,0,0" VerticalAlignment="Top" Width="60" Click="btn_L1_Click"/>
         <Button x:Name="btn_L3" Content="" HorizontalAlignment="Left" Height="60" Margin="15,150,0,0" VerticalAlignment="Top" Width="60"/>
         <Button x:Name="btn_L4" Content="" HorizontalAlignment="Left" Height="60" Margin="15,215,0,0" VerticalAlignment="Top" Width="60"/>
         <Button x:Name="btn_L2" Content="" HorizontalAlignment="Left" Height="60" Margin="15,85,0,0" VerticalAlignment="Top" Width="60"/>
