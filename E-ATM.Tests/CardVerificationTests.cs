@@ -99,5 +99,13 @@ namespace E_ATM.Tests
             card.BIN = "1234123412341234";
             Assert.AreEqual(true, atm.AuthorizeLogin(card, pin));
         }
+
+        [Test]
+        public void ChangePINSuccess()
+        {
+            int pin = 1111;
+            card.BIN = "1111111111111111";
+            Assert.AreEqual(true, atm.ChangePin(card, pin));
+        }
     }
 }

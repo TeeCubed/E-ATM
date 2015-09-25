@@ -18,6 +18,12 @@
   <wsdl:message name="IATMServer_AuthorizeCard_OutputMessage">
     <wsdl:part name="parameters" element="tns:AuthorizeCardResponse" />
   </wsdl:message>
+  <wsdl:message name="IATMServer_ChangePIN_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePIN" />
+  </wsdl:message>
+  <wsdl:message name="IATMServer_ChangePIN_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChangePINResponse" />
+  </wsdl:message>
   <wsdl:portType name="IATMServer">
     <wsdl:operation name="ValidateCard">
       <wsdl:input wsaw:Action="http://tempuri.org/IATMServer/ValidateCard" message="tns:IATMServer_ValidateCard_InputMessage" />
@@ -26,6 +32,10 @@
     <wsdl:operation name="AuthorizeCard">
       <wsdl:input wsaw:Action="http://tempuri.org/IATMServer/AuthorizeCard" message="tns:IATMServer_AuthorizeCard_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IATMServer/AuthorizeCardResponse" message="tns:IATMServer_AuthorizeCard_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChangePIN">
+      <wsdl:input wsaw:Action="http://tempuri.org/IATMServer/ChangePIN" message="tns:IATMServer_ChangePIN_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IATMServer/ChangePINResponse" message="tns:IATMServer_ChangePIN_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IATMServer" type="tns:IATMServer">
@@ -41,6 +51,15 @@
     </wsdl:operation>
     <wsdl:operation name="AuthorizeCard">
       <soap:operation soapAction="http://tempuri.org/IATMServer/AuthorizeCard" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChangePIN">
+      <soap:operation soapAction="http://tempuri.org/IATMServer/ChangePIN" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

@@ -13,5 +13,6 @@ namespace E_ATM.Library
         bool ValidateCard(ICard card);
         bool AuthorizeLogin(ICard card, int pin);
         void Withdraw(ICard card, decimal amount);
+        bool ChangePin(ICard card, int pin);
     }
 }
